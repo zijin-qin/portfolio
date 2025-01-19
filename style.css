@@ -1,3 +1,8 @@
+html {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -5,4 +10,128 @@ body {
     font: 100%/1.5 system-ui;
 
     max-width: 100ch;
+    margin-inline: auto;
+    padding: 50px;
+
+    img {
+      max-width: 50%;
+    }
+  }
+
+  nav {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid oklch(80% 3% 200);
+
+    ul {
+      display: contents;
+    }
+
+    li {
+      display: contents;
+    }
+
+    a {
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      padding: 0.5em;
+    }
+
+    a.current {
+      border-bottom: 0.4em solid oklch(80% 3% 200);
+      padding-bottom: 0.2em;
+      font-weight: bold;
+    }
+
+    a:hover {
+      border-bottom: 0.4em solid var(--color-accent);
+      background-color: oklch(from var(--color-accent) 95% 5% h);
+      padding-bottom: 0.2em;
+    }
+  }
+
+  /* form {
+    input, textarea, button {
+      font: inherit;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      margin-block: 0.5rem;
+    }
+  } */
+
+  /* label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+  } */
+
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+
+    input, textarea, button {
+      font: inherit;
+    }
+
+    label {
+      display: grid;
+      grid-template-columns: subgrid;
+    }
+
+    label, button {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+
+    article {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+      gap: 1em;
+
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: 400%;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 200%;
+    margin-bottom: 0.5em;
+  }
+
+  section {
+    padding: 10px;
+    margin: 10px;
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: violet;
+    }
   }
