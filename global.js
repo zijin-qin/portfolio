@@ -13,10 +13,10 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact Me'},
-    { url: 'resume/', title: 'Resume'},
+    { url: 'portfolio/', title: 'Home' },
+    { url: 'portfolio/projects/', title: 'Projects' },
+    { url: 'portfolio/contact/', title: 'Contact Me'},
+    { url: 'portfolio/resume/', title: 'Resume'},
     { url: 'https://github.com/zijin-qin', title: 'My GitHub'}
 ];
 
@@ -27,12 +27,10 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    // const ARE_WE_HOME = document.documentElement.classList.contains('home');
-    // if (!ARE_WE_HOME && !url.startsWith('http')) {
-    //     url = '../' + url;
-    // }
-
-    url = '../' + url;
+    const ARE_WE_HOME = document.documentElement.classList.contains('home');
+    if (!ARE_WE_HOME && !url.startsWith('http')) {
+        url = '../' + url;
+    }
 
     // nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
     let a = document.createElement('a');
