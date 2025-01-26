@@ -30,9 +30,9 @@ for (let p of pages) {
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
     if (!ARE_WE_HOME && !url.startsWith('http')) {
         if (!url.startsWith('portfolio/')) {
-            url = 'portfolio/' + url;
-        } else {
             url = '../' + url;
+        } else {
+            url = 'portfolio/' + url;
         }
     }
 
