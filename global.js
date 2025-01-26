@@ -28,7 +28,7 @@ for (let p of pages) {
     let title = p.title;
 
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + '/portfolio/' : url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + 'portfolio/' : url;
 
     // nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
     let a = document.createElement('a');
