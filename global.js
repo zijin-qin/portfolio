@@ -29,7 +29,8 @@ for (let p of pages) {
 
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
     if (!ARE_WE_HOME && !url.startsWith('http')) {
-        url = '/portfolio/' + url;
+        // url = '/portfolio/' + url;
+        url = '../' + url;
     }
 
     // nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
@@ -74,3 +75,38 @@ select.addEventListener('input', function (event) {
 
     localStorage.colorScheme = event.target.value;
 });
+
+// Fetch project data from JSON
+export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        
+        // Handling errors
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+
+        // Parsing data
+        const data = await response.json();
+        return data; 
+
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+}
+
+export function renderProjects(project, containerElement) {
+    containerElement.innerHTML = '';
+    const article = document.createElement('article');
+    article.innerHTML = `
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+}
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+    // write javascript that will allow dynamic heading levels based on previous function
+}
