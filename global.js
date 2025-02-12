@@ -96,7 +96,7 @@ export async function fetchJSON(url) {
 
 //     if (Array.isArray(project) && project.length > 0) {
 //         for (let i = 0; i < project.length; i++) {
-//             const proj = project[i];  // Accessing the array element manually using the index 'i'
+//             const proj = project[i];  // Accessing each project
             
 //             const title = proj.title;
 //             const image = proj.image;
@@ -114,34 +114,38 @@ export async function fetchJSON(url) {
 // }
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
-        containerElement.innerHTML = '';
+    containerElement.innerHTML = '';
 
-        const projectsTitle = document.querySelector('.projects-title');
-        projectsTitle.innerHTML = `
-            ${project.length} Projects
-        `;
+    const projectsTitle = document.querySelector('.projects-title');
+    if (projectsTitle) {
+        projectsTitle.innerHTML = `${project.length} Projects`;
+    }
     
-        // Validate headingLevel
-        const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-        if (!validHeadings.includes(headingLevel)) {
-            headingLevel = 'h2';  // Default to h2 if invalid headingLevel
-        }
+    // Validate headingLevel
+    const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    if (!validHeadings.includes(headingLevel)) {
+        headingLevel = 'h2';  // Default to h2 if invalid headingLevel
+    }
 
-        if (Array.isArray(project) && project.length > 0) {
-            for (let i = 0; i < project.length; i++) {
-                const proj = project[i];  // Accessing the array element manually using the index 'i'
+    if (Array.isArray(project) && project.length > 0) {
+        for (let i = 0; i < project.length; i++) {
+            const proj = project[i];  // Accessing each project
                 
-                const title = proj.title;
-                const image = proj.image;
-                const description = proj.description;
+            const title = proj.title;
+            const image = proj.image;
+            const description = proj.description;
             
-                const article = document.createElement('article');
-                article.innerHTML = `
-                    <${headingLevel}>${title}</${headingLevel}>
-                    <img src="${image}" alt="${title}">
-                    <p>${description}</p>
-                `;
-                containerElement.appendChild(article);
-            }
+            const article = document.createElement('article');
+            article.innerHTML = `
+                <${headingLevel}>${title}</${headingLevel}>
+                <img src="${image}" alt="${title}">
+                <p>${description}</p>
+            `;
+            containerElement.appendChild(article);
         }
     }
+}
+
+export async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+}

@@ -1,62 +1,74 @@
 [
     {
-        "title": "Project 1",
+        "title": "Project 1: Expository visualization (DSC106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quo non tempora neque ullam eligendi dolorem reprehenderit, fugit quod voluptatum sapiente voluptatem harum numquam necessitatibus dolores explicabo deleniti consequuntur laboriosam."
+        "description": "Created a bubble chart examining how climate varies across the U.S. by analyzing the average sunshine, rainfall, and dryness index per month in various cities."
     },
     {
-        "title": "Magnam nam minus mollitia.",
+        "title": "Project 2: Deceptive Visualization (DSC106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Cupiditate quo voluptas aut, maxime doloribus iste voluptate. Dolorum ea ipsam eveniet nihil corporis, culpa quas laudantium ipsa modi tenetur officia obcaecati, cum est enim laboriosam! Totam et commodi quos."
+        "description": "Created an earnest and a deceptive visualization using line plots comparing female and male mice activity levels."
     },
     {
-        "title": "Ab harum provident voluptas.",
+        "title": "Project 3: Interactive Visualization (DSC106)",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aliquam necessitatibus quo maiores minus aspernatur accusamus inventore? Rem obcaecati, quibusdam debitis delectus optio sequi. Suscipit quod voluptate voluptates cumque obcaecati tempora, laboriosam maiores earum in, perspiciatis aperiam vitae minus?"
+        "description": "Will create an interactive scatter plot comparing student test scores across various biometrics."
     },
     {
-        "title": "Recusandae quaerat voluptatibus aperiam.",
+        "title": "Bone Fracture Detection",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Magni nesciunt sed voluptates quis incidunt voluptatibus saepe veniam consequatur placeat suscipit, necessitatibus tenetur modi aliquam cupiditate excepturi quia quam quisquam debitis reprehenderit qui repellendus? Doloremque distinctio omnis temporibus quae."
+        "description": "Built and optimized deep learning models (CNN, Vision Transformer, EfficientNetB0) to identify bone fractures in medical imagery."
     },
     {
-        "title": "Magnam sequi illum nulla?",
+        "title": "Food Recipe Analysis",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Earum, ipsa. Eos sit voluptatum odit nihil tempora itaque, optio aut fugit! Labore in sequi architecto sit placeat fugiat doloribus, impedit a, dolorum nulla fuga dolorem aliquam ipsam. Tenetur, esse."
+        "description": "Analyzed the correlation between saturated fat content and recipe ratings through hypothesis testing by designing and implementing a regression model to evaluate how preparation time impacts recipe ratings."
     },
     {
-        "title": "At repellendus praesentium ad!",
+        "title": "Productivity-Tracking Game",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Alias similique dicta facilis dolor blanditiis. Inventore dolor provident veritatis esse placeat autem porro, obcaecati accusantium quae molestiae eum incidunt atque! Voluptatum illum accusantium quasi omnis inventore aspernatur dolorem praesentium!"
+        "description": "Designed and coded an interactive text-based program utilizing game mechanics to encourage task completion."
     },
     {
-        "title": "Iste asperiores facilis amet.",
+        "title": "IoT Weather Indicator",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ducimus, dolorem officiis ipsam cupiditate sint placeat deleniti inventore eius reiciendis nobis, mollitia laborum in obcaecati quasi nisi beatae itaque aperiam unde at accusantium, ex consequuntur nam maxime. Hic, error!"
+        "description": "Created a Raspberry Pi weather indicator with color-coded lighting for conditions."
     },
     {
-        "title": "Animi quas ipsum fugiat.",
+        "title": "Smile Recognition",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Minus in aliquid voluptate, blanditiis aspernatur, illum possimus perferendis fuga tempore error, magni modi maiores dolore nam libero recusandae ratione molestias nihil debitis amet iste minima inventore repellendus? Ut, et."
+        "description": "Built a Python-based model on Raspberry Pi to detect smiles using a 400-face dataset."
     },
     {
-        "title": "Asperiores quos fuga soluta.",
+        "title": "Tic-tac-toe Game",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Odit repellat harum fuga eos dolore, rerum ea illum soluta provident culpa eum perspiciatis totam. Repellendus fugit, libero possimus nesciunt, debitis odit minus blanditiis non quis voluptate cupiditate dolorem quidem!"
+        "description": "Built a text-based tic-tac-toe game as my first Python project."
     },
     {
-        "title": "Accusamus quis dolore itaque.",
+        "title": "HTML Website",
+        "year": "2019",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "In modi soluta magnam laudantium repellat magni dolorum mollitia vitae, excepturi, dolore a laboriosam quas animi consequuntur esse exercitationem praesentium aspernatur ipsum quis placeat molestias. Aspernatur illum quo quia repellendus!"
+        "description": "Built a simple HTML website introducing a location of choice."
     },
     {
-        "title": "Maiores ad reiciendis neque?",
+        "title": "Magic 8-ball",
+        "year": "2019",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Perspiciatis veritatis, cum eveniet unde, autem tempore adipisci aut nisi hic eaque eum sint temporibus doloremque? Debitis laudantium, est, et nulla optio impedit quibusdam culpa amet vitae provident recusandae asperiores."
+        "description": "Built a text-based magic 8-ball game that takes in user inputs and randomly generates 'Yes', 'No', or 'Maybe'."
     },
     {
-        "title": "Reiciendis labore sint eos?",
+        "title": "Guess the Letter Game",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Commodi eligendi quidem saepe eius eaque modi est, voluptas nisi sit totam quo rerum quaerat laborum sapiente aliquam. Impedit ipsa mollitia iste totam reprehenderit dolorum quidem cupiditate sequi dolorem incidunt?"
+        "description": "Developed a letter guessing game where the computer picks a random word, and the player has to guess the letters in it within a limited number of attempts."
     }
 ]
