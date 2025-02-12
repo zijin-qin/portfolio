@@ -84,20 +84,64 @@ export async function fetchJSON(url) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         }
         const data = await response.json();
+        // console.log('Fetched Data:', data);
         return data; 
     } catch (error) {
         console.error('Error fetching or parsing JSON data:', error);
     }
 }
 
-export function renderProjects(project, containerElement) {
-    containerElement.innerHTML = '';
-    const article = document.createElement('article');
-    article.innerHTML = `
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}">
-        <p>${project.description}</p>
-    `;
-    containerElement.appendChild(article);
+// export function renderProjects(project, containerElement) {
+//     containerElement.innerHTML = '';
 
-}
+//     if (Array.isArray(project) && project.length > 0) {
+//         for (let i = 0; i < project.length; i++) {
+//             const proj = project[i];  // Accessing the array element manually using the index 'i'
+            
+//             const title = proj.title;
+//             const image = proj.image;
+//             const description = proj.description;
+        
+//             const article = document.createElement('article');
+//             article.innerHTML = `
+//                 <h3>${title}</h3>
+//                 <img src="${image}" alt="${title}">
+//                 <p>${description}</p>
+//             `;
+//             containerElement.appendChild(article);
+//         }
+//     }
+// }
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+        containerElement.innerHTML = '';
+
+        const projectsTitle = document.querySelector('.projects-title');
+        projectsTitle.innerHTML = `
+            ${project.length} Projects
+        `;
+    
+        // Validate headingLevel
+        const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+        if (!validHeadings.includes(headingLevel)) {
+            headingLevel = 'h2';  // Default to h2 if invalid headingLevel
+        }
+
+        if (Array.isArray(project) && project.length > 0) {
+            for (let i = 0; i < project.length; i++) {
+                const proj = project[i];  // Accessing the array element manually using the index 'i'
+                
+                const title = proj.title;
+                const image = proj.image;
+                const description = proj.description;
+            
+                const article = document.createElement('article');
+                article.innerHTML = `
+                    <${headingLevel}>${title}</${headingLevel}>
+                    <img src="${image}" alt="${title}">
+                    <p>${description}</p>
+                `;
+                containerElement.appendChild(article);
+            }
+        }
+    }
