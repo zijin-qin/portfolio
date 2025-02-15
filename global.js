@@ -84,34 +84,11 @@ export async function fetchJSON(url) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         }
         const data = await response.json();
-        // console.log('Fetched Data:', data);
         return data; 
     } catch (error) {
         console.error('Error fetching or parsing JSON data:', error);
     }
 }
-
-// export function renderProjects(project, containerElement) {
-//     containerElement.innerHTML = '';
-
-//     if (Array.isArray(project) && project.length > 0) {
-//         for (let i = 0; i < project.length; i++) {
-//             const proj = project[i];  // Accessing each project
-            
-//             const title = proj.title;
-//             const image = proj.image;
-//             const description = proj.description;
-        
-//             const article = document.createElement('article');
-//             article.innerHTML = `
-//                 <h3>${title}</h3>
-//                 <img src="${image}" alt="${title}">
-//                 <p>${description}</p>
-//             `;
-//             containerElement.appendChild(article);
-//         }
-//     }
-// }
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
     containerElement.innerHTML = '';
@@ -134,12 +111,16 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
             const title = proj.title;
             const image = proj.image;
             const description = proj.description;
+            const year = proj.year;
             
             const article = document.createElement('article');
             article.innerHTML = `
                 <${headingLevel}>${title}</${headingLevel}>
                 <img src="${image}" alt="${title}">
-                <p>${description}</p>
+                <div class="project-details">
+                    <p>${description}</p>
+                    <p class="project-year">c. ${year}</p>
+                </div>
             `;
             containerElement.appendChild(article);
         }
