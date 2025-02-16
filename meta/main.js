@@ -247,6 +247,19 @@ function updateSelection() {
     d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
 }
 
+function updateSelectionCount() {
+    const selectedCommits = brushSelection
+        ? commits.filter(isCommitSelected)
+        : [];
+  
+    const countElement = document.getElementById('selection-count');
+    countElement.textContent = `${
+        selectedCommits.length || 'No'
+    } commits selected`;
+  
+    return selectedCommits;
+}
+
 function updateLanguageBreakdown() {
     const selectedCommits = brushSelection
         ? commits.filter(isCommitSelected)
