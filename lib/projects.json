@@ -15,19 +15,22 @@
         "title": "Project 3: Interactive Visualization (DSC106)",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Will create an interactive scatter plot comparing student test scores across various biometrics."
+        "description": "Created an interactive scatter plot comparing student test scores across various biometrics.",
+        "url": "https://project-url.com"
     },
     {
         "title": "Bone Fracture Detection",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Built and optimized deep learning models (CNN, Vision Transformer, EfficientNetB0) to identify bone fractures in medical imagery."
+        "description": "Built and optimized deep learning models (CNN, Vision Transformer, EfficientNetB0) to identify bone fractures in medical imagery.",
+        "url": "https://project-url.com"
     },
     {
         "title": "Food Recipe Analysis",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Analyzed the correlation between saturated fat content and recipe ratings through hypothesis testing by designing and implementing a regression model to evaluate how preparation time impacts recipe ratings."
+        "description": "Analyzed the correlation between saturated fat content and recipe ratings through hypothesis testing by designing and implementing a regression model to evaluate how preparation time impacts recipe ratings.",
+        "url": "https://project-url.com"
     },
     {
         "title": "Productivity-Tracking Game",
@@ -70,5 +73,12 @@
         "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed a letter guessing game where the computer picks a random word, and the player has to guess the letters in it within a limited number of attempts."
+    },
+    {
+        "title": "Bikewatching",
+        "year": "2025",
+        "image": "../images/bikewatching.png",
+        "description": "Developed an immersive, interactive map visualization of bike traffic in the Boston area during different times of the day.",
+        "url": "https://project-url.com"
     }
 ]
